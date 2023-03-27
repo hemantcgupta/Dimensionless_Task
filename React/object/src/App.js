@@ -52,7 +52,7 @@ function App() {
       e.preventDefault();
       fetch(`http://127.0.0.1:8000/results?start_date=${startDate}&end_date=${endDate}`)
         .then((response) => response.json())
-        .then((data) => setData(data.results), console.log(data.results))
+        .then((data) => setData(data.results))
         .catch((error) => console.error('There was a problem fetching the data:', error));
     };
 
